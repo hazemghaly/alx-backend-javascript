@@ -1,4 +1,7 @@
 module.exports = {
+    rules: {
+    linebreakstyle: ["error", "unix"],
+    },  //for win LF
     env: {
       browser: false,
       es6: true,
