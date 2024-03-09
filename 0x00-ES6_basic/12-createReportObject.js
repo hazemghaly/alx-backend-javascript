@@ -1,5 +1,6 @@
 export default function createReportObject(employeesList) {
   const allEmployees = {};
+  const departmentNames = Object.keys(employeesList);
   departmentNames.forEach((departmentName) => {
     const department = employeesList[departmentName];
     if (!Array.isArray(allEmployees[departmentName])) {
