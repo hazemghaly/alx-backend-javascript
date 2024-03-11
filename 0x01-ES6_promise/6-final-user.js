@@ -3,8 +3,9 @@ import uploadPhoto from './5-photo-reject';
 
 export default async function handleProfileSignup() {
   try {
-    return (await Promise.all([uploadPhoto(), signUpUser()]));
+    await Promise.all([uploadPhoto(), signUpUser()]);
+    return [Promise.all.status, Promise.all.value];
   } catch (e) {
-    return Error();
+    return [{ status: 'rejected', value: Error.toString() }];
   }
 }
