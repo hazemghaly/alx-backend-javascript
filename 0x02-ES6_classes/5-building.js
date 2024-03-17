@@ -10,5 +10,5 @@ export default class Building {
     return this._sqft;
   }
 
-  evacuationWarningMessage() {}
+  static evacuationWarningMessage() {}
 }
