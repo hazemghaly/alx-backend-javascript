@@ -4,7 +4,6 @@ export default class Pricing {
   constructor(amount, currency) {
     this._amount = amount;
     this._currency = currency;
-    this.conversionRate = 0;
     Object.defineProperties(this, {
       currency: {
         get: () => this._currency,
@@ -25,7 +24,7 @@ export default class Pricing {
     return `${this._amount} ${this.currency._name} (${this.currency._code})`;
   }
 
-  static convertPrice() {
-    return `${Pricing._amount} * ${this.conversionRate}`;
+  static convertPrice(amount, conversionRate) {
+    return `${amount} * ${conversionRate}`;
   }
 }
