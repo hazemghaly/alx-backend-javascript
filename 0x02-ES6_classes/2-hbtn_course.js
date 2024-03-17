@@ -1,8 +1,8 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
-    this._name = typeof name === 'string' ? name : console.log(TypeError('Name must be a string'));
-    this._length = typeof length === 'number' ? length : console.log(TypeError('Length must be a number'));
-    this._students = Array.isArray(students) ? students : console.log(TypeError('students must be a array'));
+    this._name = name;
+    this._length = length;
+    this._students = students;
     Object.defineProperties(this, {
       length: {
         get: () => this._length,
