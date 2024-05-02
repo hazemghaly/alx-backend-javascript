@@ -66,11 +66,11 @@ const htmlresponse = [
           res.write(Buffer.from(responseText));
           res.end(); // End the response
         })
-      .catch((err) => {
-        console.error(err);
-        res.statusCode = 500;
-        res.end('Internal Server Error');
-      });
+        .catch((err) => {
+          console.error(err);
+          res.statusCode = 500;
+          res.end('This is the list of our students\nCannot load the database');
+        });
     },
   },
 ];
