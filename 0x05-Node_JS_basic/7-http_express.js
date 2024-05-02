@@ -50,10 +50,10 @@ app.get('/', (_, res) => {
 app.get('/students', async (_, res) => {
   try {
     const report = await countStudents(DB_FILE);
-    res.status(200).send(`This is the list of our students\n ${report}`);
+    res.status(200).send(`This is the list of our students\n${report}`);
   } catch (error) {
     console.error(error);
-    res.status(500).send('Cannot load the database');
+    res.status(500).send('This is the list of our students\nCannot load the database');
   }
 });
 
