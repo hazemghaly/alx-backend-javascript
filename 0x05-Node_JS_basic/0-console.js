@@ -1,6 +1,7 @@
 // Define your function
 function displayMessage(x) {
-  process.stdout.write(`${x}\n`);
+    console.log(`${x}`);
+  // process.stdout.write(`${x}\n`);
 }
 
 // Export your function
