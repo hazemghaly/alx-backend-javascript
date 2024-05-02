@@ -1,7 +1,3 @@
-// Define your function
-function displayMessage(x) {
-  process.stdout.write(`${x}\n`);
+function displayMessage(message) {
+    console.log(message);
 }
-
-// Export your function
-module.exports = displayMessage;
